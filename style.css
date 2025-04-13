@@ -1,0 +1,155 @@
+h1{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+body{
+  margin: 0;
+}
+
+input{
+    width: 100%;
+    max-width:300px ;
+    padding: 10px;
+  border-radius: 5px;
+    border: none;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    
+} 
+#Submit{
+     height: 39px;
+     padding: 10px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)/*change not visible,but still kept as the in the video */ ;
+  cursor: pointer;
+  border: none;
+  transition: opacity .3s ease-in-out;
+}
+
+#Submit:hover{
+  opacity: .8;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.serch_res img{
+  width: 100%;
+  height: 200px;
+  /* object-fit: cover; *//*the background-size : cover property is same as object-fit :cover*/
+  background-size: cover;
+  transition: transform .3s ease-in-out;
+
+}
+
+.search_results{
+  display: flex;
+  flex-wrap: wrap;/*if the items dont fit on a single line than they will come on the next line */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;/*to center the items horizontally*/
+  padding: 20px;
+}
+
+.serch_res{
+   width: 30%;
+   border-radius: 5px;
+   /*box shadow created a white  background effect behind the anchor tag */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /*;x axis,Y axis,blurnes ,rgba */
+   overflow: hidden;/*with the help of this,was able to see the border radius in the top left ,right corner */
+   margin-bottom: 60px;
+   cursor: pointer;
+   transition: background-color .3s ease-in-out;
+}
+
+
+
+.serch_res:hover img{
+  transform: scale(1.05);
+}
+
+.serch_res a{
+   padding: 10px;
+   text-decoration: none;
+   display: block;/*display: block makes the anchor tags within .serch_res take up the full width of their container,(mostly this is the explaination)*/
+   color: darkgray;
+   
+   
+}
+
+.serch_res:hover {
+  background-color:rgba(0, 0, 0, 0.1) ;
+}
+
+#Load-more{
+   background-color: lightblue;
+   border: none;
+   height: 39px;
+   border-radius: 5px;
+   cursor: pointer;
+  color: white;
+  /*below 2 property are used to center the btn,on the same line  */
+  display: block;/*gives that element control over the entire line it occupies.*/
+  margin: 0px auto;
+
+  padding: 10px;
+  transition: opacity .3s ease-in-out;
+
+  /*below two are used to position the btn a liitle above from bottom */
+  position: relative; 
+  bottom: 20px;
+  
+  display:none;
+}
+
+#Load-more:hover{
+  opacity: .6;
+  
+}
+
+@media screen and (max-width:768px) {
+    .serch_res{
+      width: 45%;
+     
+    }
+
+     #Load-more{
+         margin-bottom: 20px;
+         
+    }
+
+   
+  }
+
+@media screen and (max-width:480px) {
+    .serch_res{
+      width: 100%;
+  
+    }
+    
+    form{
+        flex-direction: column;/*helps to place submit btn below the fiield */
+    }
+    #Submit{
+       margin-top: 20px;
+    }
+
+    #Load-more{
+         margin-bottom: 20px;
+         
+    }
+
+}
+
+
+
+
