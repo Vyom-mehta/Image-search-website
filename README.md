@@ -43,4 +43,3 @@ https://unsplash.com/developers
 
 No frameworks or build tools required.
 Works on desktop and mobile devices.
-Can be extended with additional features like image modals, pagination, or download buttons.
