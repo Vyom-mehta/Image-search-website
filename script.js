@@ -6,13 +6,12 @@ let form = document.querySelector("form");
 let search_results = document.querySelector(".search_results");
 let load_more = document.getElementById("Load-more");
 
-//value of let can change,but const value not change
-
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); //stops refreshing the page
+  event.preventDefault();
   search_Images();
   page = 1;
 });
+
 let input_value = "";
 let page = 1;
 
@@ -27,7 +26,7 @@ async function search_Images() {
     search_results.innerHTML = "";
   }
 
-  const results = data.results; //will only provide the photos info not extras .
+  const results = data.results;
 
   results.map((res) => {
     const img_Wrapper = document.createElement("div");
@@ -37,14 +36,12 @@ async function search_Images() {
     image.alt = res.alt_description;
     const image_Link = document.createElement("a");
     image_Link.href = res.links.html;
-    image_Link.target = "_blank"; //help open in new page;
+    image_Link.target = "_blank";
     image_Link.innerText = res.alt_description;
 
-    //add the image & image_link inside the image_Wrapper(div)
     img_Wrapper.appendChild(image);
     img_Wrapper.appendChild(image_Link);
 
-    //now adding that Div inside the Search_results(div)
     search_results.appendChild(img_Wrapper);
   });
 
@@ -56,7 +53,5 @@ async function search_Images() {
 }
 
 load_more.addEventListener("click", () => {
-  console.log("test");
   search_Images();
-  console.log("test=>load more completed");
 });
