@@ -1,4 +1,4 @@
-const Api_Key = "_-1S5JNCxd36YVCBucNyZKghBiYw-sk2dyT-44JjlLw";
+const Api_Key = API_KEY;
 
 let input_field = document.querySelector("#input_field");
 let form = document.querySelector("form");
